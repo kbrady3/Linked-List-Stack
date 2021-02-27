@@ -89,9 +89,8 @@ namespace LinkedListStack
                     }
                 }
 
-                string item = null;
                 string poppedValue = stackItems[top];
-                stackItems[top] = item;
+                stackItems.RemoveAt(top);
 
                 //Sets new top
                 if (!(top == 0))
@@ -117,13 +116,13 @@ namespace LinkedListStack
                 }
             }
 
-            try
+            if (!(stackItems.Count - 1 == maxSize))
             {
                 stackItems.Add(item);
                 //Sets new top
                 top += 1;
             }
-            catch
+            else
             {
                 throw new Exception("Stack full");
             }
