@@ -6,7 +6,13 @@ namespace LinkedListStack
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Stack s = new Stack();
+            s.Push("Apple");
+            s.Push("Pear");
+            s.Push("Banana");
+            Console.WriteLine("Popped: " + s.Pop());
+            Console.WriteLine("Top: " + s.Peek());
+            Console.WriteLine(s.PrintStackUp());
         }
     }
 }
